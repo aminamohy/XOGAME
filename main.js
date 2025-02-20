@@ -7,6 +7,8 @@ document.addEventListener("click", function (event) {
         }
     }
 );
+
+let playing = true;
 let cells =[];
 function XORO( cell1 , cell2 , cell3){
     if(cells[cell1] == "X"){
@@ -17,8 +19,6 @@ function XORO( cell1 , cell2 , cell3){
         document.getElementById("cell" + cell1).style.background = "green";
         document.getElementById("cell" + cell2).style.background = "green";
         document.getElementById("cell" + cell3).style.background = "green";
-
-        turns.innerHTML = `${cells[cell1]} Winner`;
     }
 
     else if (cells[cell1] == "O"){
@@ -30,10 +30,14 @@ function XORO( cell1 , cell2 , cell3){
       document.getElementById("cell" + cell2).style.background = "green";
       document.getElementById("cell" + cell3).style.background = "green";
     }
+    playing = false;
 }
 
 function DRAW(){
+  turns.innerHTML="GAME OVER";
   document.getElementById("NOwinner").style.display = "block";
+  document.getElementById("newgame").style.display="block";
+  playing = false;
 }
 
 function WINNER(){
@@ -74,13 +78,13 @@ function game(id)
 {
     
    let cell = document.getElementById(id);
-   if(Turn ==='X' && cell.innerHTML == '' )
+   if(Turn ==='X' && cell.innerHTML == '' && playing)
     {
       cell.innerHTML = 'X';
       Turn = 'O';
       turns.innerHTML ="O";
    }
-   else if(Turn === 'O' && cell.innerHTML==''){
+   else if(Turn === 'O' && cell.innerHTML=='' && playing){
     cell.innerHTML = 'O';
     Turn= 'X';
     turns.innerHTML="X";
