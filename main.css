@@ -56,7 +56,7 @@ body{
    100%{text-shadow: 0 0 5px #B0E0E6};
     
 }
-#NOwinner, #winnerX , #newgame , #winnerY{
+#NOwinner, #winnerX , #newgame , #winnerO{
     display:none;
     animation: glow 1.5s infinite alternate;
     font-size: 22px;
