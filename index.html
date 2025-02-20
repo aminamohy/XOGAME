@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <div class="XO">
+        <p class="title">Tic Tac Toe</p>
+        <P id="glow-text">Press any cell to start the game</P>
+        <p id="winnerX">The winner is X</p>
+        <p id="winnerY">The winner is Y</p>
+        <p id="NOwinner">No winner</p>
+        <button id="newgame">NEW GAME</button>
+        <div class="turns"><span>XO</span></div>
+        <div id="board">
+            <div id="cells">
+            <div id="cell1" class="cell" onclick="game(this.id)" ></div>
+            <div id="cell2" class="cell" onclick="game(this.id)" ></div>
+            <div id="cell3" class="cell" onclick="game(this.id)" ></div>
+        </div>
+       
+        <div id="cells2">
+            <div id="cell4" class="cell" onclick="game(this.id)" ></div>
+            <div id="cell5" class="cell" onclick="game(this.id)"></div>
+            <div id="cell6" class="cell" onclick="game(this.id)" ></div>
+        </div>
+        
+        <div id="cells3">
+            <div id="cell7" class="cell" onclick="game(this.id)"></div>
+            <div id="cell8" class="cell" onclick="game(this.id)"></div>
+            <div id="cell9" class="cell" onclick="game(this.id)"></div>
+        </div>
+        
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

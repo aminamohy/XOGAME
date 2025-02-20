@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    box-sizing:border-box ;
+    text-align: center;
+}
+body{
+    display:flex;
+    justify-content:center ;
+    align-items:center ;;
+    height:100vh;
+    background-color:#121212;
+    font-family: "Poppins";
+}
+#board{
+    width:270px;
+    height:270px;
+    margin:auto;
+    width:cover;
+}
+.cell{
+    width:80px;
+    height:80px;
+    background-color:#424242 ;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 50px;
+    font-weight: 900;
+    color:#B0E0E6;
+}
+.turns{
+    width:260px;
+    background-color: #424242 ;
+    text-align:center ;
+    margin:auto;
+    color: #B0E0E6;
+    font-size: 30px;
+    font-weight: 900;
+}
+.cell:hover{
+    background-color: #FFEB3B;
+    cursor:pointer;
+}
+#cells , #cells2 , #cells3 {
+    display:flex;
+}
+
+.first{
+    display:flex;
+    justify-content:column ;
+    justify-content: space-between;
+} 
+
+@keyframes glow{
+    0%{text-shadow: 0 0 5px #B0E0E6};
+    50%{text-shadow: 0 0 20px #B0E0E6};
+   100%{text-shadow: 0 0 5px #B0E0E6};
+    
+}
+#NOwinner, #winnerX , #newgame , #winnerY{
+    display:none;
+    animation: glow 1.5s infinite alternate;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold
+}
+#glow-text{
+    color:#B0E0E6;
+    animation: glow 1.5s infinite alternate;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.title{
+    color:#FFD700;
+    font-size: 42px;
+    font-family: "Poppins";
+    font-weight: 900;
+    margin-bottom:20px;
+}
